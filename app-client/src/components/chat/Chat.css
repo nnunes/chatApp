@@ -1,0 +1,21 @@
+
+
+.chat-app{
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+}
+
+.chat{
+	border-radius: 15px;
+
+	flex: 1 1 auto;
+	margin: 20px;
+	padding: 20px;
+    overflow-y: scroll;
+}
+
+.chat li{
+	padding: 0px 30px;
+	list-style: none;
+}

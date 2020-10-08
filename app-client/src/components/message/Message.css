@@ -1,0 +1,44 @@
+
+.message {
+    text-align: left;
+}
+.message.message__own{
+	text-align:right;
+}
+
+.message .message__content{
+	padding: 1px 25px 1px 30px;
+	line-height: 25px;
+	max-width:90%;
+	display:inline-block;
+	border-radius:5px;
+    word-wrap: break-word;
+    background-color:#3f51b5;
+    color: white;
+}
+
+.message.message__own .message__content{
+    background-color: white;
+    color: #3f51b5;
+}
+
+.message .message__sender{
+	color: #3f51b5; /*  #6fbced;*/
+    font-size: 20px;
+    font-family: -webkit-body;
+    padding: 20px 4px 20px 4px;
+}
+
+.message .message__triangle{
+	width: 0;
+	height: 0;
+	border-style: solid;
+    border-width: 0 10px 10px 10px;
+    margin-left: 15px;
+    border-color: transparent transparent #3f51b5 transparent;
+}
+
+.message .message__date{
+    font-size: 8px;
+    color: grey;
+}

@@ -1,0 +1,16 @@
+
+.login {
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 40px;
+    background-color: white;
+    width: 200px;
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
