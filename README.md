@@ -1,9 +1,9 @@
 # chatApp
 a simple chat app with spring BE and react FE
 
-clone repo
-run docker-compose up --build
-go to localhost:3000
+- clone repo
+- run docker-compose up --build
+- go to localhost:3000
 (a loading spinner will appear while the websocket connection is being established)
 
 
