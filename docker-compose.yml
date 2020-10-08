@@ -1,0 +1,40 @@
+version: '3.7'
+
+# Define services
+services:
+  # App backend service
+  app-server:
+    container_name: app-server
+    build:
+      context: ./app-server # Use image built from dockerfile in the app-server directory.
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080" # Forward the exposed port 8080 on the container to port 8080 on the host machine
+    restart: always  
+    networks: # Networks to join (Services on the same network can communicate with each other using their name)
+      - backend
+      - frontend
+    volumes:
+      - './app-server:/app'
+
+  # Frontend Service 
+  app-client:
+    container_name: app-client
+    build:
+      context: ./app-client # Use image built from dockerfile in the app-client directory.
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # Forward the exposed port 80 on the container to port 80 on the host machine
+    depends_on:
+      - app-server
+    volumes:
+      - './app-client:/app'
+      - '/app/node_modules'
+    restart: always
+    networks:
+      - frontend
+
+# Networks to be created to facilitate communication between containers
+networks:
+  backend:
+  frontend:    
